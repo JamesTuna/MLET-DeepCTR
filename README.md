@@ -14,12 +14,12 @@
 ### 3. Replace source codes to enable MLET for DeepCTR models 
 - here we take autoInt for example, MLET implementation for other models are done in the same way
 - we provide modified source code under ```utils``` and ```models``` (for DCN, NFM, AutoInt, xDeepFM, DeepFM)
-- assume DeepCTR-Torch package is installed on path ```/home/jamestuna/env/lib/python3.8/site-packages/deepctr_torch/```
+- check where DeepCTR-Torch is installed ```DEEPCTR_PATH=/home/jamestuna/env/lib/python3.8/site-packages/deepctr_torch/```
 - use the following commands to replace source codes:
-- ```cp ./models/MLETautoInt.py /home/jamestuna/env/lib/python3.8/site-packages/deepctr_torch/models/autoInt.py```
-- ```cp ./utils/MLETbasemodel.py /home/jamestuna/env/lib/python3.8/site-packages/deepctr_torch/models/basemodel.py```
-- ```cp ./utils/MLETinputs.py /home/jamestuna/env/lib/python3.8/site-packages/deepctr_torch/inputs.py```
-- ```cp ./utils/MLETcore.py /home/jamestuna/env/lib/python3.8/site-packages/deepctr_torch/layers/core.py```
+- ```cp ./models/MLETautoInt.py ${DEEPCTR_PATH}/models/autoInt.py```
+- ```cp ./utils/MLETbasemodel.py ${DEEPCTR_PATH}/models/basemodel.py```
+- ```cp ./utils/MLETinputs.py ${DEEPCTR_PATH}/inputs.py```
+- ```cp ./utils/MLETcore.py ${DEEPCTR_PATH}/layers/core.py```
 
 ### 4. MLET training with different inner dimension
 - example code of training dcn with MLET: ```train/MLET_dcn.sh```
